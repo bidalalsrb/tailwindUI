@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius-xs: 0.4rem;
+  --radius-sm: 0.6rem;
+  --radius-md: 0.9rem;
+  --radius-lg: 1.25rem;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-50 font-sans text-slate-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-brand-800;
+  }
+}
+
+@layer components {
+  .shadow-card {
+    box-shadow:
+      0 20px 60px -40px rgba(15, 23, 42, 0.45),
+      0 10px 25px -30px rgba(15, 23, 42, 0.35);
+  }
+}
